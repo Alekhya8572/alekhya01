@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm} %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <File name="HtmlFileAppender" fileName="logs/loggers.html">
+            <HTMLLayout title="Log Report"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="org.testng" level="warn" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="HtmlFileAppender"/>
+        </Logger>
+
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="HtmlFileAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
+
+
+
+
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<Configuration status="WARN">-->
+<!--    <Appenders>-->
+<!--        <Console name="Console" target="SYSTEM_OUT">-->
+<!--            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm} %-5level %logger{36} - %msg%n"/>-->
+<!--        </Console>-->
+
+<!--        <File name="HtmlFileAppender" fileName="logs/loggers.html">-->
+<!--            <HTMLLayout title="Log Report"/>-->
+<!--        </File>-->
+<!--    </Appenders>-->
+
+<!--    <Loggers>-->
+<!--        &lt;!&ndash; Set log level for TestNG internal classes to WARN to suppress INFO logs &ndash;&gt;-->
+<!--        <Logger name="org.testng" level="warn" additivity="false">-->
+<!--            <AppenderRef ref="Console"/>-->
+<!--            <AppenderRef ref="HtmlFileAppender"/>-->
+<!--        </Logger>-->
+
+
+<!--        <Root level="info">-->
+<!--            <AppenderRef ref="Console"/>-->
+<!--            <AppenderRef ref="HtmlFileAppender"/>-->
+<!--        </Root>-->
+<!--    </Loggers>-->
+<!--</Configuration>-->

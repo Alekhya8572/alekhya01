@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="10">
+
+    <listeners>
+        <listener class-name="Listeners.MyListeners"/>
+    </listeners>
+
+    <test verbose="2"  name="crometest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testCases.TC1"/>
+        </classes>
+    </test>
+
+    <test verbose="2"  name="firefoxTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testCases.TC2"/>
+        </classes>
+    </test>
+
+    <test verbose="2"  name="edgeTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testCases.TC3"/>
+        </classes>
+    </test>
+
+    <test verbose="2"  name="test4">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testCases.TC4"/>
+        </classes>
+    </test>
+
+</suite>
